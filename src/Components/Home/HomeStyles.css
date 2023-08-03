@@ -1,0 +1,35 @@
+.home{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top:180px;
+    margin-top: 50px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+    box-shadow: 8px 8px 5px rgba(128, 128, 128, 0.989);
+    background-color:  rgb(41, 175, 241);
+    color: white;
+    font-family: Mabry-Regular;
+}
+
+.rw{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column1{
+    padding: 30px;
+}
+
+
+.column2 img{
+    width: 550px;
+    border-radius: 8px;
+    height: 500px;
+    padding: 10px;
+}

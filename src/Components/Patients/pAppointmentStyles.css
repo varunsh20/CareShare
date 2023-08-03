@@ -1,0 +1,23 @@
+.myAppointments{
+    margin-top: 25px;
+    margin-left: 25px;
+    padding: 20px;
+}
+
+.headr h2{
+    font-family: Mabry-Regular;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.lin{
+    color: rgb(41, 175, 241);
+    font-size: 22px;
+    font-weight: 600;
+    font-family: Mabry-Regular;
+}
+
+.aebtn{
+    margin-top: 20px;
+}
+

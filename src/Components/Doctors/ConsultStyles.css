@@ -1,0 +1,94 @@
+.ccontent{
+    width: 70%;
+    left: 260px;
+    top: 80px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 200px;
+    padding: 10px;
+    border:2px solid black;
+    border-radius: 15px;
+    background-color: rgb(255 112 112 / 28%);
+    box-shadow: 8px 8px 5px rgba(128, 128, 128, 0.989);
+}
+
+.citems{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.mhdr{
+    display: flex;
+    flex-direction: row;
+}
+
+.mhdr h2{
+    font-family: Mabry-Regular;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.meeting{
+   margin-left: auto;
+}
+.meeting a {
+    font-family: Mabry-Regular;
+    font-weight: 700;
+    color:rgb(66, 68, 214);
+}
+.mtable{
+    display: flex;;
+    width: 100%;
+}
+
+.t{
+    border-collapse: separate;
+    width: 100%;
+    font-size: 1.2rem;
+    background-color: white;
+}
+
+.remarks{
+    margin-top: 50px;
+}
+
+.remarks h2{
+    font-family: Mabry-Regular;
+    font-weight: 900;
+    font-size: 30px;
+}
+.textarea{
+    margin-top: 20px;
+    font-family: Mabry-Regular;
+    font-size: 20px;
+}
+textarea{
+    width: 100%;
+    min-height: 200px;
+    max-height: fit-content;
+    padding: 10px;
+}
+
+.epsbtn{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 20px;
+  
+  }
+  
+.epsbtn button{
+    background-color: rgb(41, 175, 241);
+    font-size: 22px;
+    font-weight: 700;
+    font-family: Mabry-Regular;
+    border: 0.8px solid black;
+  }
+  
+  .epsbtn :hover{
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color:#6d80f4;
+  }

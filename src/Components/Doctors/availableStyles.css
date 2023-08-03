@@ -1,0 +1,181 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top:85px;
+}
+
+.intro{
+    width: 90%;
+    display: flex;
+    margin:50px auto 40px auto ;
+    align-items: center;
+    padding: 20px;
+    font-size: 50px;
+    font-family: Mabry-Regular;
+    width: 90%;
+    border: 3px solid black;
+    border-radius: 8px;
+    background-color:  rgb(41, 175, 241);
+    color: white;
+}
+.list{
+    width: 90%;
+    height: max-content;
+    bottom: 50px;
+    margin:20px auto 50px auto;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(41, 175, 241);
+    border: 2px solid black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 8px 8px 5px rgba(128, 128, 128, 0.989);
+}
+
+.docCards{
+    width: 90%;
+    background-color: rgba(226, 236, 237, 0.615);
+    margin: 40px auto 40px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    grid-gap:20px;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+}
+.dImage{
+    width: 15%;
+    padding: 10px 5px 10px 10px;
+    position: relative;
+}
+
+.dImage img{
+    margin-top: 25px;
+    width: 90%;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.ddetails{
+    grid-gap: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    padding: 10px;
+    justify-content: flex-start;
+    font-size: 1.3rem;
+}
+
+.dinfo{
+    width: 40%;
+    margin-right: 10px;
+    margin-top: 20px;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    grid-gap: 10px;
+    line-height: 1.8;
+}
+
+.dinfo p{
+    font-size: 22px;
+    font-family: Mabry-Regular;
+}
+.visit{
+    margin-left:200px;
+    display: flex;
+    align-items: center;
+}
+
+.visit a{
+    font-size: 24px;
+    font-weight: 600;
+    font-family: Mabry-Regular;
+    white-space: nowrap;
+    color:  rgb(62, 68, 231);;
+}
+
+.visit :hover{
+    color:#6d80f4;
+}
+.abtn{
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.abtn button{
+    background-color: rgb(41, 175, 241);
+    border: 1px solid black;
+    white-space: nowrap;
+    height: fit-content;
+    padding: 10px;
+    width: fit-content;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: Mabry-Regular;
+
+}
+
+.abtn :hover{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:#6d80f4;
+}
+
+.aType{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-family: Mabry-Regular;
+    font-weight: 800;
+    margin: 10px;
+}
+
+.aType input{
+    margin-top: 5px;
+    font-size: 18px;
+    font-family: Mabry-Regular;
+    font-weight: 600;
+}
+
+.options{
+    display: flex;
+    flex-direction: row;
+    grid-gap:20px;
+}
+
+.spinner{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+@media screen and (max-width:1190px){
+    .ddetails{
+        display: flex;
+        flex-direction: column;
+    }
+    .visit{
+        margin-left: 0px;
+    }
+
+    .abtn{
+        margin-left: 0px;
+    }
+    .docCards{
+        display: flex;
+        flex-direction: column;
+    }
+    .dImage{
+        width: 35%;
+    }
+}

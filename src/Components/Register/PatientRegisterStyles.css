@@ -1,0 +1,254 @@
+.cntain{
+    width: 100%;
+    height: auto;
+  }
+  
+  .main{
+    position: absolute;
+    left: 260px;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-left: 40px;
+    width: 70%;
+  }
+  
+  .hd{
+    width: 90%;
+    border: 3px solid black;
+    margin-bottom: 8px;
+    border-radius: 20px;
+    background-color: rgb(17, 146, 211);
+  }
+  
+  .hd h2{
+    margin: 20px;
+    color: white;
+    font-family: Mabry-Regular;
+  }
+  
+  .publishform{
+    width: 90%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    box-shadow: 8px 8px 5px rgba(128, 128, 128, 0.989);
+    background-color: rgb(220 242 246);
+  }
+  
+  .name-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
+    padding-left: 30px;
+    width: 70%;
+    height: 100px;
+    margin-bottom: 15px;
+  }
+  .name-div p {
+    font-family: Mabry-Regular;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .name-div input {
+    width: 88%;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-family: Mabry-Regular;
+    font-size: 20px;
+    padding: 10px 16px;
+  }
+
+  .dob-gender{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+  }
+  .dob-div {
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+  }
+  .dob-div p {
+    font-family: Mabry-Regular;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .dob-div input {
+    height: auto;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-family: Mabry-Regular;
+    font-size: 20px;
+    padding: 10px 16px;
+  }
+  .gender-div {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    margin-right: 20px;
+  }
+  .gender-div p {
+    font-family: Mabry-Regular;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .gender-div input{
+    height: auto;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-family: Mabry-Regular;
+    font-size: 16px;
+    padding: 10px 12px;
+  }
+
+  .genderType{
+    display: flex;
+    flex-direction: row;
+    grid-gap: 10px;
+    height: auto;
+    font-family: Mabry-Regular;
+    font-size: 16px;
+    padding: 10px 16px;
+  }
+
+  .Upload{
+    padding-right: 30px;
+    padding-left: 30px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .cover-div{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cover-div p {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Mabry-Regular;
+  }
+  
+  .dotted-div {
+    width: 80%;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .top {
+    flex:1.5;
+    display: flex;
+    align-items: end;
+  }
+
+  .uploadCover{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    font-family: Mabry-Regular;
+    font-size: 15px;
+    border: 1px solid black;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin:auto;
+  }
+  
+  .uploadCover::-webkit-file-upload-button {
+        width: 100px;
+        height: 35px;
+        border: 1px solid black;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-right: 10px;
+        font-size: 16px;
+        background-color: black;
+        color: white;
+        justify-content: center;
+        align-items: center;
+  }
+  
+  .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+  }
+  
+  .submit{
+    justify-content: center;
+    background-color: rgb(41, 175, 241);
+    width: 60%;
+    border-radius: 50px;
+    cursor: pointer;
+    height: 50px;
+    font-size: 25px;
+    font-family: Mabry-Regular;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .submit:hover{
+    border: 2px solid black;
+    background-color:#2136be;
+  }
+
+  @media screen and (max-width:850px){
+    .hd{
+      width: 70%;
+    }
+  
+    .publishform{
+      width: 70%;
+    }
+    .Upload{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .category-container2{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  @media screen and (max-width:630px){
+    .hd{
+      width: 50%;
+    }
+  
+    .publishform{
+      width: 50%;
+    }
+  }
