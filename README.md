@@ -7,9 +7,9 @@
 - In this way better and efficient treatment can be given to patients that actually matters.
 - Patients can also book for **Online Appointments** through our protocol, as we have integrated **Huddle01** in our dApp.
 
-![image](https://github.com/varunsh20/CareShare/assets/62187533/d6b2f4b3-0502-4465-9b90-59c3d2f47c31)
-
 [View dApp](https://careshare.netlify.app/)
+
+![image](https://github.com/varunsh20/CareShare/assets/62187533/d6b2f4b3-0502-4465-9b90-59c3d2f47c31)
 
 ## Tech Stack
 - Solidity, JavaScript, Remix, Hardhat, Chai, Alchemy, Metamask, Node.js, React.js, Ethers.js, CSS, ThirdWeb, Huddle01, 
@@ -38,4 +38,11 @@
   ![image](https://github.com/varunsh20/CareShare/assets/62187533/45f66b59-3458-42be-af35-6961c65cc70d)
 
 ### Doctors
+- Similar to Patients, Doctors can also view and edit their profile. They can see the rating and reviews given to them by their consulted patients only.
+   ![image](https://github.com/varunsh20/CareShare/assets/62187533/e6db7a3a-7e32-4d5c-ab39-61bc1b11478a)
+- They can see their past patients appointments and consultaions, similar to that of a patient show above.
+- Doctors can see thier scheduled appointments and consult patients from **My Appointments** tab.
+   ![image](https://github.com/varunsh20/CareShare/assets/62187533/b91ece1c-c731-4816-8af1-0ac238ea1fb1)
+- Here they can write consultation to their patient and start a meeting on **Huddle01** if the appointment is online.
+   ![image](https://github.com/varunsh20/CareShare/assets/62187533/1b86edff-1a00-4550-8181-1d19b37db78d)
 
