@@ -7,7 +7,7 @@
 - In this way better and efficient treatment can be given to patients that actually matters.
 - Patients can also book for **Online Appointments** through our protocol, as we have integrated **Huddle01** in our dApp.
 
-[View dApp](https://careshare.netlify.app/)
+### [View dApp](https://careshare.netlify.app/)
 
 ![image](https://github.com/varunsh20/CareShare/assets/62187533/d6b2f4b3-0502-4465-9b90-59c3d2f47c31)
 
