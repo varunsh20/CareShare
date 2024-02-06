@@ -1,7 +1,7 @@
 # CareShare
 
 ## Overview
- - A Decentralized Healthcare dapp on polygon mumbai that allows **Patients & Doctors** to connect with each other for booking **Appointments and Consultations**. Patients data is completely secured and tamper proof on the network and can be accessed with ease from anywhere.
+ - A Decentralized Healthcare dApp on polygon mumbai that allows **Patients & Doctors** to connect with each other for booking **Appointments and Consultations**. Patients data is completely secured and tamper proof on the network and can be accessed with ease from anywhere.
 - The main focus of this project was to solve the condition of current medical system where Hospitals and Clinics do not have any history or access to a patient's data and this may prove costly in case of an emergency where certain amount of time is spent on conducting basic tests on the patients or to identify if any individual is allergic to a certain drug or not. This time can be utilized on giving actual treatment to the patient.
 - So for solving this problem our platform can be utilized where doctors can look at a Patient's **Medical History** including their basic details, all kinds of pasts consultaions and treatments, thier previous appointments etc.
 - In this way better and efficient treatment can be given to patients that actually matters.
