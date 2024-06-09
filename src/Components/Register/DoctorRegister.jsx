@@ -28,8 +28,6 @@ export default function DoctorRegister(){
     //Function to convert ether to wei.
     const fromEthertoWei = (num) => ethers.utils.parseEther(num.toString())
     
-    
-    //This function uploads the cover image to ipfs and updates the state of cover image field with its uri.
     const picUpload = async () => {
         const fileInput = document.getElementById('cover');
         const filePath = fileInput.files[0].name;
