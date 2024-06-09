@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
 import { useState } from "react";
 import moment from 'moment';
-import { Web3Storage, File } from 'web3.storage/dist/bundle.esm.min.js';
+import { useStorageUpload } from "@thirdweb-dev/react";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./PatientRegisterStyles.css"
@@ -10,7 +10,6 @@ import Patients from '../../../contracts/artifacts/contracts/Patients.sol/Patien
 export default function PatientRegister(){
 
     const Patient_Address = import.meta.env.VITE_P_ADDRESS;
-    const token = import.meta.env.VITE_IPFS_TOKEN;
     
     const [formInput, setFormInput] = useState({
         name:"",
@@ -22,38 +21,21 @@ export default function PatientRegister(){
         gender:""
       });
 
-    //It returns our access token.
-    function getAccessToken () {
-        return token;
-    }
-    //This function create a new web3storage client.
-    function makeStorageClient () {
-        return new Web3Storage({ token: getAccessToken() })
-    }
+    const { mutateAsync: upload } = useStorageUpload();
     
-    //This function uploads the cover image to ipfs and updates the state of cover image field with its uri.
-    const coverHandle = async () => {
+    const picUpload = async () => {
         const fileInput = document.getElementById('cover');
         const filePath = fileInput.files[0].name;
-        const imageCID = await uploadToIPFS(fileInput.files,0);
-    
+        const imageCID = await upload({ data: [fileInput.files[0]] });
+        if(imageCID){
+          toast.success("File Uploaded Successfully.", {
+          position: toast.POSITION.TOP_CENTER
+        });
+      }
         setFormInput({
           ...formInput,
-          url: `http://lens.infura-ipfs.io/ipfs/${imageCID}/${filePath}`
+          url: `https://ipfs.io/ipfs/${imageCID.toString().split("://")[1]}`
         })
-    }
-
-    const uploadToIPFS = async (files, flag) => {
-        const client = makeStorageClient()
-        const cid = await client.put(files)
-  
-        // Fires toast when cover image or content is uploaded to ipfs.
-        if(flag==0){
-          toast.success("File Uploaded Successfully.", {
-            position: toast.POSITION.TOP_CENTER
-          });
-        }
-        return cid
     }
     
     const submitDetails = async()=>{
@@ -197,7 +179,7 @@ export default function PatientRegister(){
             <p>Profile Image</p>
             <div className="dotted-div">
               <div className="top">
-                <input className="uploadCover" type="file" id="cover" onChange={coverHandle}/>
+                <input className="uploadCover" type="file" id="cover" onChange={picUpload}/>
               </div>
             </div>
           </div>
