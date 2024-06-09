@@ -2,7 +2,7 @@ import SideBar from "./PateintsSideBar";
 import { useEffect, useState } from "react";
 import { Modal,ModalHeader,ModalBody,Row,Col} from "reactstrap";
 import "./PatientStyles.css";
-import { Web3Storage} from 'web3.storage/dist/bundle.esm.min.js';
+import { useStorageUpload } from "@thirdweb-dev/react";
 import { toast, ToastContainer } from 'react-toastify';
 import {TailSpin} from 'react-loader-spinner';
 import { ethers } from "ethers";
@@ -71,39 +71,21 @@ export default function Patient(){
         getPatientInfo();
     },[])
 
-
-     //It returns our access token.
-     function getAccessToken () {
-        return token;
-    }
-    //This function create a new web3storage client.
-    function makeStorageClient () {
-        return new Web3Storage({ token: getAccessToken() })
-    }
+    const { mutateAsync: upload } = useStorageUpload();
     
     //This function uploads the cover image to ipfs and updates the state of cover image field with its uri.
-    const coverHandle = async () => {
+    const picUpload = async () => {
         const fileInput = document.getElementById('cover');
-        const filePath = fileInput.files[0].name;
-        const imageCID = await uploadToIPFS(fileInput.files,0);
-    
-        setDetailsFormInput({
-          ...detailsFormInput,
-          url: `http://lens.infura-ipfs.io/ipfs/${imageCID}/${filePath}`
-        })
-    }
-
-    const uploadToIPFS = async (files, flag) => {
-        const client = makeStorageClient()
-        const cid = await client.put(files)
-  
-        // Fires toast when cover image or content is uploaded to ipfs.
-        if(flag==0){
+        const imageCID = await upload({ data: [fileInput.files[0]] });
+        if(imageCID){
           toast.success("File Uploaded Successfully.", {
-            position: toast.POSITION.TOP_CENTER
-          });
-        }
-        return cid
+          position: toast.POSITION.TOP_CENTER
+        });
+      }
+        setFormInput({
+          ...formInput,
+          url: `https://ipfs.io/ipfs/${imageCID.toString().split("://")[1]}`
+        })
     }
 
 
@@ -271,7 +253,7 @@ export default function Patient(){
                         <p>Change Profile Image</p>
                         <div className="dotted-div">
                         <div className="top">
-                            <input className="uploadCover" type="file" id="cover" onClick = {coverHandle}/>
+                            <input className="uploadCover" type="file" id="cover" onChange = {picUpload}/>
                         </div>
                         </div>
                     </div>
