@@ -8,7 +8,9 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-  <ThirdwebProvider activeChain="mumbai">
+  <ThirdwebProvider 
+  clientId="1dd340fb1746ae8918c5d7d9bb8fbc68"
+  activeChain="mumbai">
     <App />
   </ThirdwebProvider>
   </React.StrictMode>,
