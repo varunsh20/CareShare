@@ -9,9 +9,8 @@ import Doctors from '../../../contracts/artifacts/contracts/Doctors.sol/Doctors.
 
 export default function Navbar(){
 
-    const addr = useAddress();
-    const [, switchNetwork] = useNetwork(); // Switch to desired chain
-    const isMismatched = useNetworkMismatch();
+    const [account,setAccount] = useState("");
+    const [isConnected,setConnected] = useState(false);
     const [patientExists,setPExists] = useState(false);
     const [doctorExists,setDExists] = useState(false);
     const [loading,setLoading] = useState(true);
@@ -20,13 +19,28 @@ export default function Navbar(){
     const Doctor_Address = import.meta.env.VITE_D_ADDRESS
     const RPC_URL =  import.meta.env.VITE_RPC_URL;
 
-    useEffect(() => {
-        // Check if the user is connected to the wrong network
-        if (isMismatched) {
-          switchNetwork(ChainId.Mumbai); 
-        }
-     }, [addr])
+    //This allows users to connect to their metamask wallet in case the page is refreshed.
+    useEffect(()=>{
+        connectHandler();
+    },[window.ethereum])
     
+
+    //Function for connecting metamask wallet.
+    const connectHandler = async () => {
+        if(window.ethereum){
+        await window.ethereum.request({
+                method: 'wallet_switchEthereumChain',
+                params: [{ chainId: '0x13882' }], // chainId must be in hexadecimal numbers
+              });
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts'});
+        const c_account = ethers.utils.getAddress(accounts[0])
+        setAccount(c_account);
+        setConnected(true);
+        }
+        else{
+            toast.warn("Please install MetaMask.")
+        }
+    }
 
     function reloadPage() {
         window.location.reload(true);
@@ -70,7 +84,7 @@ export default function Navbar(){
                 </div>
             ) : (
             <div>
-            {addr == null || (!patientExists && !doctorExists) ? (
+            {account == "" || (!patientExists && !doctorExists) ? (
             <>
             <Link to="/patientRegister">Patient</Link>
             <Link to="/doctorRegister">Doctor</Link>
